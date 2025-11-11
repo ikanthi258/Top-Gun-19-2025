@@ -6,7 +6,7 @@
 import { Container, Typography, Box, Button, Stack, Paper, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import DetectionPopup from '../components/DetectionPopup';
-import { type DetectedObject } from '../types/detection';
+import { type DetectedObject } from '../types';
 
 const DetectionPopupPage = () => {
   const sampleObjects: DetectedObject[] = [
@@ -17,6 +17,9 @@ const DetectionPopupPage = () => {
       lng: 101.166279,
       objective: 'unknown',
       size: 'medium',
+      class: '',
+      confidence: 0,
+      bbox: []
     },
     {
       obj_id: 'obj_002',
@@ -25,6 +28,9 @@ const DetectionPopupPage = () => {
       lng: 101.166300,
       objective: 'our',
       size: 'large',
+      class: '',
+      confidence: 0,
+      bbox: []
     },
     {
       obj_id: 'obj_003',
@@ -33,6 +39,9 @@ const DetectionPopupPage = () => {
       lng: 101.166250,
       objective: 'enemy',
       size: 'small',
+      class: '',
+      confidence: 0,
+      bbox: []
     },
   ];
 

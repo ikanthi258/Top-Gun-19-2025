@@ -6,7 +6,7 @@
 import { Container, Typography, Box, Button, Stack, Paper, Alert } from '@mui/material';
 import { Link } from 'react-router-dom';
 import MapComponent from '../components/MapComponent';
-import { type DetectedObject } from '../types/detection';
+import { type DetectedObject } from '../types';
 
 const MapPage = () => {
   const sampleObjects: DetectedObject[] = [
@@ -17,6 +17,9 @@ const MapPage = () => {
       lng: 101.166279,
       objective: 'unknown',
       size: 'medium',
+      class: '',
+      confidence: 0,
+      bbox: []
     },
     {
       obj_id: 'obj_002',
@@ -25,6 +28,9 @@ const MapPage = () => {
       lng: 101.166300,
       objective: 'our',
       size: 'large',
+      class: '',
+      confidence: 0,
+      bbox: []
     },
     {
       obj_id: 'obj_003',
@@ -33,6 +39,9 @@ const MapPage = () => {
       lng: 101.166250,
       objective: 'enemy',
       size: 'large',
+      class: '',
+      confidence: 0,
+      bbox: []
     },
   ];
 

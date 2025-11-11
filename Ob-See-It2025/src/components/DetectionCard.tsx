@@ -12,7 +12,7 @@ import {
   Stack,
 } from '@mui/material';
 import { Icon } from '@iconify/react';
-import { type DetectionEvent } from '../types/detection';
+import { type DetectionEvent } from '../types';
 import { formatThaiDateTime } from '../utils/dateFormat';
 
 interface DetectionCardProps {

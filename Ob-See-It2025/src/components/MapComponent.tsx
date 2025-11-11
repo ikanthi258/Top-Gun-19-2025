@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import { Box, IconButton } from '@mui/material';
 import { Icon } from '@iconify/react';
-import { type DetectedObject } from '../types/detection';
+import { type DetectedObject } from '../types';
 import DetectionPopup from './DetectionPopup';
 import 'mapbox-gl/dist/mapbox-gl.css';
 

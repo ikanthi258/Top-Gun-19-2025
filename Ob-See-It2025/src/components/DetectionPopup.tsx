@@ -11,7 +11,7 @@ import {
   Stack,
 } from '@mui/material';
 import { Icon } from '@iconify/react';
-import { type DetectedObject } from '../types/detection';
+import { type DetectedObject } from '../types';
 import ImageViewer from './ImageViewer';
 
 interface DetectionPopupProps {

@@ -1,6 +1,34 @@
-/**
- * Types สำหรับข้อมูลการตรวจจับวัตถุ
- */
+import type { Camera } from "./camera.interface";
+import type { ImageInfo } from "./image.interface";
+
+export interface DetectionEvent {
+  id: number;
+  cam_id: string;
+  timestamp: string;
+  image_path: string;
+}
+
+export interface DetectedObject {
+  class: string;
+  confidence: number;
+  bbox: number[];
+  [key: string]: any;
+}
+
+export interface DetectionEventsResponse {
+  success: boolean;
+  data: DetectionEvent[];
+}
+
+export interface ObjectDetectionResponse {
+  success: boolean;
+  message: string;
+  data: {
+    cam_id: string;
+    timestamp: string;
+    image: ImageInfo;
+  };
+}
 
 // วัตถุที่ตรวจพบแต่ละชิ้น
 export interface DetectedObject {
@@ -10,13 +38,6 @@ export interface DetectedObject {
   lng: number;         // พิกัด Longitude
   objective: string;   // วัตถุประสงค์ เช่น "unknown", "our", "enemy"
   size: string;        // ขนาดวัตถุ เช่น "small", "medium", "large"
-}
-
-// ข้อมูลกล้อง
-export interface Camera {
-  id: string;          // UUID ของกล้อง
-  name: string;        // ชื่อกล้อง เช่น "Team Alpha"
-  location: string;    // ตำแหน่งกล้อง "defence" หรือ "offence"
 }
 
 // เหตุการณ์การตรวจจับ

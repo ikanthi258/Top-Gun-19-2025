@@ -6,7 +6,7 @@
 import { Container, Typography, Box, Button, Stack, Paper } from '@mui/material';
 import { Link } from 'react-router-dom';
 import DetectionCard from '../components/DetectionCard';
-import { type DetectionEvent } from '../types/detection';
+import { type DetectionEvent } from '../types';
 
 const DetectionCardPage = () => {
   const sampleDetection: DetectionEvent = {
@@ -18,6 +18,9 @@ const DetectionCardPage = () => {
       id: '550e8400-e29b-41d4-a716-446655440000',
       name: 'Team Alpha',
       location: 'defence',
+      token: '',
+      createdAt: '',
+      updatedAt: ''
     },
     objects: [
       {
@@ -27,6 +30,9 @@ const DetectionCardPage = () => {
         lng: 101.166279,
         objective: 'unknown',
         size: 'medium',
+        class: '',
+        confidence: 0,
+        bbox: []
       },
       {
         obj_id: 'obj_002',
@@ -35,6 +41,9 @@ const DetectionCardPage = () => {
         lng: 101.166300,
         objective: 'our',
         size: 'large',
+        class: '',
+        confidence: 0,
+        bbox: []
       },
     ],
   };
