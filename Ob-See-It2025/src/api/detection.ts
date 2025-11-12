@@ -13,7 +13,7 @@ export const getRecentDetections = async (
 ): Promise<DetectionResponse> => {
   const response = await apiClient.get(`/object-detection/${camId}`, {
     headers: {
-      'x-camera-token': token,  // Authentication token
+      'authentication': token,  // Authentication token
     },
   });
 

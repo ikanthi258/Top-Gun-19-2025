@@ -4,6 +4,7 @@ import type {
   ClearDataResponse,
   DetectedObject,
   DetectionEventsResponse,
+  ModelAttack,
   ObjectDetectionResponse,
   RegenerateTokenResponse,
 } from "../types";
@@ -35,12 +36,12 @@ export const getCameraById = async (
 export const getDetectionEvents = async (
   camId: string,
   cameraToken: string
-): Promise<DetectionEventsResponse> => {
-  const response = await apiClient.get<DetectionEventsResponse>(
-    `/object-detection/${camId}`,
+): Promise<ModelAttack> => {
+  const response = await apiClient.get<ModelAttack>(
+    `/v1/attack`,
     {
       headers: {
-        "x-camera-token": cameraToken,
+        "authentication": cameraToken,
       },
     }
   );

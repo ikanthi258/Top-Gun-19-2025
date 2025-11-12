@@ -5,8 +5,10 @@
 
 import { useState } from 'react';
 
+
 import { clearCameraData, createImageUrl, getCameraById, getDetectionEvents, getUploadedFile, regenerateToken, sendObjectDetection } from '../services';
 import type { DetectedObject } from '../types';
+import { data } from 'react-router-dom';
 
 export default function CameraTestPage() {
   // State สำหรับ cam_id และ token
@@ -44,6 +46,11 @@ export default function CameraTestPage() {
       setLoading(false);
     }
   };
+  // useEffect(() => {
+  //   if (re){
+  //     // something
+  //   }
+  // }, (data))
 
   // API #1: Get Camera Info
   const handleGetCamera = () => {

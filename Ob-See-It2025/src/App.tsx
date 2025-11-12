@@ -14,7 +14,7 @@ import DetectionPopupPage from './pages/04_DetectionPopupPage';
 import ImageViewerPage from './pages/05_ImageViewerPage';
 import MapPage from './pages/06_MapPage';
 import ApiSocketPage from './pages/07_ApiSocketPage';
-//import DashboardPage from './pages/08_DashboardPage';
+import DashboardPage from './pages/08_DashboardPage';
 import CameraTestPage from './pages/09_CameraService';
 
 // สร้าง Material-UI theme
@@ -47,6 +47,7 @@ function App() {
         <CssBaseline />
         <BrowserRouter>
           <Routes>
+            <Route path="/camera-test" element={<CameraTestPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/01-route" element={<RoutePage />} />
             <Route path="/02-mui-grid" element={<MuiGridPage />} />
@@ -55,8 +56,7 @@ function App() {
             <Route path="/05-image-viewer" element={<ImageViewerPage />} />
             <Route path="/06-map" element={<MapPage />} />
             <Route path="/07-api-socket" element={<ApiSocketPage />} />
-            {/* <Route path="/08-dashboard" element={<DashboardPage />} /> */}
-            <Route path="/camera-test" element={<CameraTestPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

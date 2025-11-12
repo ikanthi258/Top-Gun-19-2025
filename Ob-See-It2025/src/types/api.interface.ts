@@ -8,3 +8,8 @@ export interface RegenerateTokenResponse {
   token: string;
   message: string;
 }
+
+export interface ApiResponse<T> {
+  success : boolean;
+  data: T;
+}

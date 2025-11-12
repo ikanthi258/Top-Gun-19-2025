@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
-import { type DetectionEvent } from '../types/detection';
+import { type DetectionEvent } from '../types';
 
 export const useSocket = (camId: string, enabled: boolean) => {
   const [socket, setSocket] = useState<Socket | null>(null);
